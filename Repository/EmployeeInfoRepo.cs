@@ -10,10 +10,15 @@ using simpleapi.Models;
 
 namespace simpleapi.Repository
 {
+
+    /// <summary>
+    ///  diri na part diri ang implmentation sa atong Business logic ge inherit naku ang ang atong interface diri na part
+    /// /// </summary>
     public class EmployeeInfoRepo: IEmployeeInfo
     {
         private readonly TestContext _context;
 
+        // kaneh TestContext mao ni ang connection sa atong database . naa na siya na folder sa Datas>TestContext.cs
         public EmployeeInfoRepo(TestContext context)
         {
             _context = context;
@@ -48,6 +53,11 @@ namespace simpleapi.Repository
             return data.Entity;
         }
 
+        /// <summary>
+        /// 
+        /// e explain lang naku ni ugma ma'am pasabot sa IEnumerable
+        /// </summary>
+        /// <returns></returns>
         public async Task<IEnumerable<EmployeeInfo>> GetAllEmployee()
         {
             return await  _context.EmployeeInfos.ToListAsync();

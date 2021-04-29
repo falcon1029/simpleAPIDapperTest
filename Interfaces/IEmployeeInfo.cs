@@ -6,6 +6,11 @@ namespace simpleapi.Interfaces
 {
     public interface IEmployeeInfo
     {
+        /// <summary>
+        ///  diri nato gina define ang Business logic sa atong 
+        /// </summary>
+        /// <param name="employee"></param>
+        /// <returns></returns>
         public Task<EmployeeInfo> SaveEmployeeInfo(EmployeeInfo employee);
         public Task<EmployeeInfo> UpdateEmployeeInfo(EmployeeInfo employee);
         public Task<EmployeeInfo> GetEmployeeById(int id);

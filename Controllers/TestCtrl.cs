@@ -13,6 +13,9 @@ namespace simpleapi.Controllers
         private readonly IEmployeeInfo _employeeInfo;
 
 
+        // diri ato ng e inject tong atong interface para gamiton na nato siya sa api
+        // same rani sa sa service pag sa vue ka or angular ma'am e inject ra nimo imong service 
+        // sa ato lang is ang repository lang
         public TestCtrl(IEmployeeInfo employeeInfo)
         {
             _employeeInfo = employeeInfo;
